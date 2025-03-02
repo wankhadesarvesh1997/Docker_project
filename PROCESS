@@ -48,6 +48,12 @@ CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 
 INDEX.HTML:
 
+4. GIVE PERMISSIONS
+
+chmod 777 /var/run/docker.sock
+systemctl daemon-reload
+systemctl restart docker.service
+
 
 PIPELINE:
 
@@ -79,12 +85,6 @@ pipeline {
     }
 }
 
-
-4. GIVE PERMISSIONS
-
-chmod 777 /var/run/docker.sock
-systemctl daemon-reload
-systemctl restart docker.service
 
 
 5. WRITE COMPOSE FILE AND PUSH TO GITHUB
